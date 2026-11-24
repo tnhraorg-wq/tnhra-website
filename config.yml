@@ -1,0 +1,113 @@
+# TNHRA website admin (Decap CMS). Change REPO below to the TNHRA GitHub repository.
+backend:
+  name: github
+  repo: tnhraorg-wq/tnhra-website
+  branch: main
+  commit_messages:
+    update: "Update {{collection}} ({{author-login}})"
+site_url: https://tnhra.com
+logo_url: /admin/logo.png
+locale: en
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: updates
+    label: "Website updates"
+    editor: {preview: false}
+    files:
+      - label: "Events / competitions"
+        name: events
+        file: data/events.json
+        fields:
+          - label: Events
+            name: items
+            widget: list
+            summary: "{{fields.date}} – {{fields.title}}"
+            fields:
+              - {label: "ID (short, no spaces, e.g. 2027-01-10-cec-show)", name: id, widget: string}
+              - {label: "Date (last day of event)", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMM YYYY", time_format: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Venue, name: venue, widget: string, required: false}
+              - {label: Details, name: details, widget: text, required: false}
+              - {label: "Link (prospectus/results)", name: link, widget: string, required: false}
+      - label: "News"
+        name: news
+        file: data/news.json
+        fields:
+          - label: News
+            name: items
+            widget: list
+            summary: "{{fields.date}} – {{fields.title}}"
+            fields:
+              - {label: "ID (short, no spaces)", name: id, widget: string}
+              - {label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMM YYYY", time_format: false}
+              - {label: Headline, name: title, widget: string}
+              - {label: Story, name: details, widget: text}
+      - label: "Circulars / notices"
+        name: circulars
+        file: data/circulars.json
+        fields:
+          - label: Circulars
+            name: items
+            widget: list
+            summary: "{{fields.date}} – {{fields.title}}"
+            fields:
+              - {label: "ID", name: id, widget: string}
+              - {label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMM YYYY", time_format: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Details, name: details, widget: text, required: false}
+              - {label: "PDF / file", name: asset, widget: file, required: false}
+      - label: "Equestrian athletes (Rider ID card holders)"
+        name: riders
+        file: data/riders.json
+        fields:
+          - label: Athletes
+            name: items
+            widget: list
+            summary: "{{fields.name}} – {{fields.club}}"
+            fields:
+              - {label: "ID (card-firstname-lastname)", name: id, widget: string}
+              - {label: Name, name: name, widget: string}
+              - {label: Club, name: club, widget: string}
+              - {label: District, name: district, widget: string}
+              - {label: "TNHRA status", name: tnhra, widget: string, default: "ID card issued"}
+              - {label: "EFI number", name: efi, widget: string, required: false}
+              - {label: Category, name: category, widget: string, required: false}
+              - {label: Discipline, name: discipline, widget: string, required: false}
+              - {label: "Prominent Member", name: prominent, widget: boolean, required: false}
+      - label: "Photo gallery"
+        name: gallery
+        file: data/gallery.json
+        fields:
+          - label: Photos
+            name: items
+            widget: list
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: "ID", name: id, widget: string}
+              - {label: Photo, name: asset, widget: image}
+              - {label: Caption, name: caption, widget: string}
+              - {label: "Date added (number, leave as is)", name: created, widget: number, required: false}
+      - label: "Office-bearer photos"
+        name: photos
+        file: data/photos.json
+        fields:
+          - label: Photos
+            name: items
+            widget: list
+            summary: "{{fields.id}}"
+            fields:
+              - {label: "Key (ob-firstname-lastname)", name: id, widget: string}
+              - {label: Photo, name: asset, widget: image}
+      - label: "Official documents (PDFs)"
+        name: files
+        file: data/files.json
+        fields:
+          - label: Documents
+            name: items
+            widget: list
+            summary: "{{fields.id}}"
+            fields:
+              - {label: "Document key (do not change)", name: id, widget: string}
+              - {label: File, name: asset, widget: file}
+              - {label: "File name", name: name, widget: string, required: false}

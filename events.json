@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "id": "2026-11-12-fei-wjc-south",
+   "date": "2026-11-22",
+   "title": "FEI Jumping World Challenge (South Zone)",
+   "venue": "Surge Stables, Bangalore",
+   "details": "12–22 November 2026. Tamil Nadu equestrian athletes competing."
+  },
+  {
+   "id": "2026-11-16-fei-wdc-south",
+   "date": "2026-11-20",
+   "title": "FEI Dressage World Challenge (South Zone)",
+   "venue": "Surge Stables, Bangalore",
+   "details": "16–20 November 2026. Tamil Nadu equestrian athletes competing."
+  },
+  {
+   "id": "2026-11-20-ooty-nq1",
+   "date": "2026-11-21",
+   "title": "EFI National Qualifier for JNEC 2026 (1st NQ)",
+   "venue": "Good Shepherd International School, Ooty",
+   "details": "20–21 November 2026 (camp 19–22 Nov). EFI prospectus — see EFI Updates."
+  },
+  {
+   "id": "2026-11-23-ooty-nq",
+   "date": "2026-11-23",
+   "title": "EFI National Qualifier for JNEC 2026",
+   "venue": "Good Shepherd International School, Ooty",
+   "details": "23–24 November 2026. Prospectus published by EFI on 17 Oct 2026 — see EFI Updates."
+  }
+ ]
+}
