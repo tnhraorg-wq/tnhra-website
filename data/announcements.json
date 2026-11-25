@@ -1,0 +1,59 @@
+{
+ "items": [
+  {
+   "id": "wdc26-miraya",
+   "date": "2026-11-25",
+   "tag": "Silver",
+   "title": "2nd Place in India – Prix St. Georges",
+   "name": "Miraya R Dadabhoy",
+   "event": "FEI Dressage World Challenge 2026",
+   "details": "Chennai Equitation Centre. Miraya finished 2nd in the combined national ranking for Prix St. Georges on Knockout (63.971%), and 14th of 25 in Senior I on Furst Florianus (65.856%). South Zone, Surge Stable, Bangalore, 18 Nov 2026.",
+   "photo": "",
+   "show_on_home": true
+  },
+  {
+   "id": "wdc26-aadya",
+   "date": "2026-11-25",
+   "tag": "Top 5",
+   "title": "5th Place in India – Senior II",
+   "name": "Aadya Esha",
+   "event": "FEI Dressage World Challenge 2026",
+   "details": "Red Earth Riding School. 5th of 9 in Senior II on Guliver (59.773%) and 11th of 25 in Senior I on Paprika (67.477%). South Zone, Surge Stable, Bangalore.",
+   "photo": "",
+   "show_on_home": true
+  },
+  {
+   "id": "wdc26-pranav",
+   "date": "2026-11-25",
+   "tag": "Youth",
+   "title": "12th Place in India – Youth",
+   "name": "Pranav Deepak",
+   "event": "FEI Dressage World Challenge 2026",
+   "details": "Chennai Equitation Centre. 12th of 23 in the Youth combined ranking on Consul (67.450%).",
+   "photo": "",
+   "show_on_home": true
+  },
+  {
+   "id": "wdc26-hashini",
+   "date": "2026-11-25",
+   "tag": "Youth",
+   "title": "14th Place in India – Youth",
+   "name": "Hashini B",
+   "event": "FEI Dressage World Challenge 2026",
+   "details": "Equine Dreams. 14th of 23 in the Youth combined ranking on GSE's Escobar (66.000%).",
+   "photo": "",
+   "show_on_home": true
+  },
+  {
+   "id": "wdc26-akanksha",
+   "date": "2026-11-25",
+   "tag": "Youth",
+   "title": "19th Place in India – Youth",
+   "name": "Akanksha Bharadwaj",
+   "event": "FEI Dressage World Challenge 2026",
+   "details": "19th of 23 in the Youth combined ranking on Lady Ann (63.800%). South Zone, Surge Stable, Bangalore.",
+   "photo": "",
+   "show_on_home": true
+  }
+ ]
+}
