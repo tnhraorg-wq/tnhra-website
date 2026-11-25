@@ -1,0 +1,113 @@
+media:
+  input: uploads
+  output: /uploads
+content:
+  - name: events
+    label: Events / competitions
+    type: file
+    path: data/events.json
+    format: json
+    fields:
+      - name: items
+        label: Events
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (short, no spaces)", type: string }
+          - { name: date, label: "Date (last day)", type: date }
+          - { name: title, label: Title, type: string }
+          - { name: venue, label: Venue, type: string }
+          - { name: details, label: Details, type: text }
+          - { name: link, label: "Link (prospectus/results)", type: string }
+  - name: news
+    label: News
+    type: file
+    path: data/news.json
+    format: json
+    fields:
+      - name: items
+        label: News
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (short, no spaces)", type: string }
+          - { name: date, label: Date, type: date }
+          - { name: title, label: Headline, type: string }
+          - { name: details, label: Story, type: text }
+  - name: circulars
+    label: Circulars / notices
+    type: file
+    path: data/circulars.json
+    format: json
+    fields:
+      - name: items
+        label: Circulars
+        type: object
+        list: true
+        fields:
+          - { name: id, label: ID, type: string }
+          - { name: date, label: Date, type: date }
+          - { name: title, label: Title, type: string }
+          - { name: details, label: Details, type: text }
+          - { name: asset, label: "PDF / file", type: file }
+  - name: riders
+    label: Equestrian athletes
+    type: file
+    path: data/riders.json
+    format: json
+    fields:
+      - name: items
+        label: Athletes
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (card-firstname-lastname)", type: string }
+          - { name: name, label: Name, type: string }
+          - { name: club, label: Club, type: string }
+          - { name: district, label: District, type: string }
+          - { name: tnhra, label: TNHRA status, type: string }
+          - { name: efi, label: EFI number, type: string }
+          - { name: category, label: Category, type: string }
+          - { name: discipline, label: Discipline, type: string }
+          - { name: prominent, label: Prominent Member, type: boolean }
+  - name: gallery
+    label: Photo gallery
+    type: file
+    path: data/gallery.json
+    format: json
+    fields:
+      - name: items
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - { name: id, label: ID, type: string }
+          - { name: asset, label: Photo, type: image }
+          - { name: caption, label: Caption, type: string }
+  - name: photos
+    label: Office-bearer photos
+    type: file
+    path: data/photos.json
+    format: json
+    fields:
+      - name: items
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Key (ob-firstname-lastname)", type: string }
+          - { name: asset, label: Photo, type: image }
+  - name: files
+    label: Official documents (PDFs)
+    type: file
+    path: data/files.json
+    format: json
+    fields:
+      - name: items
+        label: Documents
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Document key", type: string }
+          - { name: asset, label: File, type: file }
+          - { name: name, label: File name, type: string }
