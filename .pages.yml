@@ -2,6 +2,26 @@ media:
   input: uploads
   output: /uploads
 content:
+  - name: announcements
+    label: Announcements (results / winners)
+    type: file
+    path: data/announcements.json
+    format: json
+    fields:
+      - name: items
+        label: Announcements
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (short, no spaces)", type: string }
+          - { name: date, label: Date, type: date }
+          - { name: tag, label: "Tag (Gold / Silver / Bronze / Selected)", type: string }
+          - { name: title, label: "Headline (e.g. 2nd Place in India – Prix St. Georges)", type: string }
+          - { name: name, label: Rider name, type: string }
+          - { name: event, label: Event, type: string }
+          - { name: details, label: Details, type: text }
+          - { name: photo, label: Rider photo, type: image }
+          - { name: show_on_home, label: Show on homepage screen, type: boolean, default: true }
   - name: events
     label: Events / competitions
     type: file
